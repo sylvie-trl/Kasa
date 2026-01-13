@@ -24,3 +24,22 @@
     text-decoration: underline; // style du lien actif
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    gap: 20px;
+    padding: 20px;
+
+    &__logo {
+      height: 46px;
+    }
+
+    &__nav {
+      gap: 12px;
+    }
+  }
+
+  .nav__link {
+    font-size: 12px;
+  }
+}
