@@ -1,3 +1,9 @@
+import Banner from "../../components/Banner/Banner";
+
 export default function About() {
-  return <h1>À propos</h1>;
+  return (
+    <div>
+      <Banner image="/images/banner-about.jpg" opacity={0.3} />
+    </div>
+  );
 }
