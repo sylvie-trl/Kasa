@@ -1,18 +1,16 @@
+@import "../styles/variables";
+
 .layout {
+  max-width: $max-width-layout;
+  margin: 20px auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 
   main {
+    max-width: $max-width-content;
+    margin: 0 auto;
+    padding: $padding-main;
     flex: 1;
-    padding: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .layout {
-    main {
-      padding: 1rem;
-    }
   }
 }

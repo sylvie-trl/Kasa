@@ -7,11 +7,11 @@ const Banner = ({ image, title, opacity, className }) => {
       style={{ backgroundImage: `url(${image})` }}
     >
       <div
-        className="banner-overlay"
+        className="banner__overlay"
         style={{ backgroundColor: `rgba(0, 0, 0, ${opacity})` }}
       />
 
-      {title && <h1 className="banner-title">{title}</h1>}
+      {title && <h1 className="banner__title">{title}</h1>}
     </div>
   );
 };

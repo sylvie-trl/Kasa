@@ -1,10 +1,16 @@
+@import "../../styles/_variables.scss";
+
 .header {
+  width: 100%;
+  max-width: $max-width-layout;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 50px;
+  padding: 0 20px;
 
   &__logo {
+    display: block;
     height: 68px;
   }
 
@@ -27,8 +33,10 @@
 
 @media (max-width: 768px) {
   .header {
-    gap: 20px;
-    padding: 20px;
+    flex-direction: column; // empile logo et nav sur mobile
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
 
     &__logo {
       height: 46px;

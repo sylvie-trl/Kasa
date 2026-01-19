@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 1240px;
   height: 223px;
+  margin: 40px auto;
   border-radius: 25px;
   background-color: #000;
   background-size: cover;
@@ -11,14 +12,14 @@
   align-items: center;
   position: relative;
 
-  .banner-overlay {
+  &__overlay {
     position: absolute;
     inset: 0;
     border-radius: 25px;
     z-index: 0;
   }
 
-  .banner-title {
+  &__title {
     position: relative;
     z-index: 1;
     color: white;
@@ -27,19 +28,17 @@
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     padding: 0 20px;
   }
-}
 
-@media (max-width: 768px) {
-  .banner {
+  @media (max-width: 768px) {
     height: 111px;
     flex-wrap: wrap;
     border-radius: 10px;
 
-    .banner-overlay {
+    &__overlay {
       border-radius: 10px;
     }
 
-    .banner-title {
+    &__title {
       font-size: 24px;
       text-align: left;
     }

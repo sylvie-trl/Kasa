@@ -5,7 +5,7 @@ import "./Home.scss";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Banner
         image="/images/banner-home.jpg"
         title="Chez vous, partout et ailleurs"
@@ -13,10 +13,14 @@ export default function Home() {
       />
 
       <div className="gallery">
-        {logements.map((log) => (
-          <Card key={log.id} cover={log.cover} title={log.title} />
-        ))}
+        <div className="gallery__wrapper">
+          <div className="gallery__list">
+            {logements.map((log) => (
+              <Card key={log.id} cover={log.cover} title={log.title} />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
