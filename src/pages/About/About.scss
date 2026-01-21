@@ -1,0 +1,13 @@
+@import "../../styles/_variables.scss";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__collapses {
+    width: 100%;
+    max-width: 1023px;
+    margin: 30px auto 0;
+  }
+}

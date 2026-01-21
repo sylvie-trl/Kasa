@@ -1,13 +1,13 @@
 @import "../styles/variables";
 
 .layout {
-  max-width: $max-width-layout;
-  margin: 20px auto;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 
   main {
+    width: 100%;
     max-width: $max-width-content;
     margin: 0 auto;
     padding: $padding-main;
