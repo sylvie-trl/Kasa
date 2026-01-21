@@ -1,0 +1,28 @@
+@import "../../styles/_variables.scss";
+
+.error-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 140px;
+  margin: 140px 0;
+
+  &__title {
+    font-size: 288px;
+    color: $color-primary;
+    font-family: $font-family;
+  }
+
+  &__message {
+    font-size: 24px;
+    color: $color-primary;
+    margin-top: 20px;
+  }
+
+  &__link {
+    margin-top: 30px;
+    font-size: 18px;
+    color: $color-secondary;
+  }
+}

@@ -6,7 +6,11 @@ const Collapse = ({ title, children }) => {
 
   return (
     <div className="collapse">
-      <button className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
+      <button
+        className="collapse__header"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+      >
         <span className="collapse__title">{title}</span>
         <span
           className={`collapse__icon ${isOpen ? "collapse__icon--open" : ""}`}
@@ -26,7 +30,12 @@ const Collapse = ({ title, children }) => {
         </span>
       </button>
 
-      {isOpen && <div className="collapse__content">{children}</div>}
+      <div
+        className={`collapse__content ${isOpen ? "collapse__content--open" : ""}`}
+      >
+        {" "}
+        <div className="collapse__content-inner">{children}</div>{" "}
+      </div>
     </div>
   );
 };
