@@ -16,7 +16,12 @@ export default function Home() {
         <div className="gallery__wrapper">
           <div className="gallery__list">
             {logements.map((log) => (
-              <Card key={log.id} cover={log.cover} title={log.title} />
+              <Card
+                key={log.id}
+                id={log.id}
+                cover={log.cover}
+                title={log.title}
+              />
             ))}
           </div>
         </div>
