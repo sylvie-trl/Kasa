@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Slideshow.scss";
+import chevronLeft from "../../assets/icones/chevron-left.svg";
+import chevronRight from "../../assets/icones/chevron-right.svg";
 
 const Slideshow = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,14 +34,14 @@ const Slideshow = ({ pictures }) => {
             className="slideshow__arrow slideshow__arrow--left"
             onClick={prevSlide}
           >
-            ‹
+            <img src={chevronLeft} alt="Précédent" className="arrow-icon" />
           </button>
 
           <button
             className="slideshow__arrow slideshow__arrow--right"
             onClick={nextSlide}
           >
-            ›
+            <img src={chevronRight} alt="Suivant" className="arrow-icon" />
           </button>
 
           <div className="slideshow__counter">

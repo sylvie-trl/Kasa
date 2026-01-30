@@ -1,11 +1,8 @@
-.about {
+.about__collapses {
   display: flex;
   flex-direction: column;
-  width: 100%;
-
-  &__collapses {
-    width: 100%;
-    max-width: 1023px;
-    margin: 30px auto 0;
-  }
+  gap: 30px;
+  max-width: 1023px;
+  margin: 50px auto 0;
+  padding: 0 20px;
 }

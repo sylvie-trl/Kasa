@@ -1,38 +1,80 @@
 .logement {
+  --fw-normal: 500;
+  --fw-bold: 700;
+  --color-primary: #ff6060;
+  --color-grey: #e3e3e3;
+  --lh-default: 1.43;
+
   margin: 0 auto;
   padding: 20px;
+  line-height: var(--lh-default);
+  font-weight: var(--fw-normal);
 
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    align-items: flex-start;
+    gap: 80px;
+    margin-top: 30px;
   }
 
   &__infos {
-    max-width: 70%;
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 36px;
+    color: var(--color-primary);
+    font-weight: var(--fw-normal);
   }
 
   &__location {
-    margin-top: 5px;
+    margin: 7px 0 25px 0;
+    font-size: 18px;
+    font-weight: var(--fw-normal);
   }
 
   &__tags {
     display: flex;
     gap: 10px;
-    margin-top: 10px;
+    flex-wrap: wrap;
   }
 
   .tag {
+    background: var(--color-primary);
     color: white;
     padding: 5px 15px;
     border-radius: 10px;
     font-size: 14px;
+    font-weight: var(--fw-bold);
   }
 
-  &__host {
+  .logement__right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; // Alignement DROITE pour rating + host
+    gap: 20px; // Espace vertical étoiles-host
+  }
+
+  .logement__rating {
+    display: flex;
+    gap: 6px;
+  }
+
+  .logement__host {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+
+    .host__name {
+      text-align: end;
+      font-size: 18px;
+      font-weight: 500;
+      max-width: 85px;
+      word-break: break-word;
+      color: var(--color-primary);
+      margin: 0;
+    }
 
     .host__picture {
       width: 64px;
@@ -42,23 +84,90 @@
     }
   }
 
-  &__rating {
-    margin-top: 20px;
-
-    .star {
-      font-size: 24px;
-      color: #e3e3e3;
-    }
-  }
-
   &__collapses {
     display: flex;
     gap: 20px;
-    margin-top: 30px;
-    align-items: flex-start;
+    margin-top: 60px;
+    align-items: stretch;
 
     > * {
       flex: 1;
+      max-width: 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .logement {
+    &__top {
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    &__infos {
+      order: 1;
+    }
+
+    .logement__right-column {
+      order: 2;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 12px;
+    }
+
+    &__title {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    &__location {
+      font-size: 14px;
+      margin: 4px 0 16px 0;
+    }
+
+    &__tags {
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 4px 12px;
+      font-size: 10px;
+    }
+
+    .logement__rating {
+      gap: 2px;
+    }
+
+    .star {
+      width: 24px;
+      height: 24px;
+    }
+
+    .logement__host {
+      gap: 8px;
+
+      .host__name {
+        max-width: 65px;
+        font-size: 12px;
+      }
+
+      .host__picture {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &__collapses {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 32px;
+
+      > * {
+        max-width: 100%; // Pleine largeur
+      }
     }
   }
 }

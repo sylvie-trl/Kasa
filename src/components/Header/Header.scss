@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  padding-top: 45px;
 
   &__logo {
     display: block;
@@ -25,22 +26,22 @@
   font-weight: 500;
 
   &--active {
-    text-decoration: underline; // style du lien actif
+    text-decoration: underline;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    flex-direction: column; // empile logo et nav sur mobile
     align-items: center;
     gap: 12px;
-    padding: 10px 0;
+    padding: 15px;
 
     &__logo {
       height: 46px;
     }
 
     &__nav {
+      text-transform: uppercase;
       gap: 12px;
     }
   }

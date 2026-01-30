@@ -20,7 +20,7 @@ export default function Header() {
             isActive ? "nav__link nav__link--active" : "nav__link"
           }
         >
-          À propos
+          A Propos
         </NavLink>
       </nav>
     </header>
