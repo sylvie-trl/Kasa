@@ -1,17 +1,16 @@
+@import "../../styles/_variables.scss";
+
 .collapse {
   width: 100%;
-  max-width: 1023px;
-  min-height: 52px;
   border-radius: 5px;
   overflow: hidden;
   background-color: #f6f6f6;
-  margin-bottom: 30px;
 
   &__header {
     width: 100%;
     background-color: $color-primary;
     color: white;
-    padding: 15px 5px;
+    padding: 15px 20px;
     border: none;
     display: flex;
     justify-content: space-between;
@@ -22,7 +21,7 @@
 
   &__title {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 18px;
   }
 
   &__icon {
@@ -33,42 +32,30 @@
     }
   }
 
-  .collapse__content {
+  &__content {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.35s ease;
   }
 
-  .collapse__content--open {
-    max-height: 500px; // ou plus si besoin
+  &__content--open {
+    max-height: 600px; // large
   }
 
-  .collapse__content-inner {
+  &__content-inner {
     padding: 20px;
-    background-color: #f6f6f6;
-    font-size: 18px;
+    font-size: 16px;
 
-    transform: translateY(-15px);
+    transform: translateY(-12px);
     opacity: 0;
 
     transition:
-      transform 0.35s ease,
-      opacity 0.35s ease;
+      transform 0.25s ease,
+      opacity 0.25s ease;
   }
 
-  .collapse__content--open .collapse__content-inner {
+  &__content--open &__content-inner {
     transform: translateY(0);
     opacity: 1;
-  }
-
-  @media (max-width: 768px) {
-    &__header {
-      font-size: 16px;
-      padding: 12px 15px;
-    }
-
-    &__content {
-      font-size: 14px;
-    }
   }
 }

@@ -5,12 +5,13 @@
   }
 
   &__list {
-    padding: 40px;
-    gap: 30px;
-    max-width: $max-width-layout;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding: 40px;
+    margin-bottom: 50px;
+    gap: 30px;
+    max-width: $max-width-layout;
     background-color: $bg-gallery;
     border-radius: $border-radius;
   }

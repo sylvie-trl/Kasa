@@ -4,7 +4,11 @@ import "./Header.scss";
 export default function Header() {
   return (
     <header className="header">
-      <img src="/logo.svg" alt="Logo" className="header__logo" />
+      <img
+        src="/logo-orange.svg"
+        alt="Logo Kasa orange"
+        className="header__logo"
+      />
       <nav className="header__nav">
         <NavLink
           to="/"
