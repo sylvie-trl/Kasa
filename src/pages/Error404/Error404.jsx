@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Error404.scss";
 
 export default function Error404() {
@@ -7,9 +8,9 @@ export default function Error404() {
       <p className="error-404__message">
         Oups! La page que vous demandez n'existe pas.
       </p>
-      <a className="error-404__link" href="/">
+      <Link className="error-404__link" to="/">
         Retourner sur la page d’accueil
-      </a>
+      </Link>
     </div>
   );
 }

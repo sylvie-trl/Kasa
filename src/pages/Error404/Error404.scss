@@ -1,26 +1,55 @@
+@import "../../styles/_variables.scss";
+
 .error-404 {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 140px;
-  margin: 140px 0;
 
-  &__title {
-    font-size: 288px;
-    color: $color-primary;
-    font-family: $font-family;
+  text-align: center;
+  gap: 80px;
+  padding: 60px 0;
+}
+
+.error-404__title {
+  font-size: 288px;
+  font-weight: 700;
+  line-height: 1;
+  color: $color-primary;
+  margin: 0;
+}
+
+.error-404__message {
+  font-size: 36px;
+  font-weight: 500;
+  color: $color-primary;
+  margin: 0;
+}
+
+.error-404__link {
+  font-size: 18px;
+  font-weight: 500;
+  color: $color-secondary;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .error-404 {
+    gap: 60px;
+    padding: 40px 0;
   }
 
-  &__message {
-    font-size: 24px;
-    color: $color-primary;
-    margin-top: 20px;
+  .error-404__title {
+    font-size: 96px;
   }
 
-  &__link {
-    margin-top: 30px;
+  .error-404__message {
     font-size: 18px;
-    color: $color-secondary;
+    padding: 0 20px;
+  }
+
+  .error-404__link {
+    font-size: 14px;
   }
 }
