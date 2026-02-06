@@ -16,16 +16,17 @@ L’objectif est de créer le front-end d’une plateforme de location immobili�
 - Vite
 
 ## Structure du projet
-
+```
 src/
-├─ assets/ # Images, icônes et ressources statiques
-├─ components/ # Composants réutilisables (Banner, Card, Collapse, Slideshow, Header, Footer)
-├─ layout/ # Centralisation des éléments communs à toutes les pages (Header, Footer, Layout)
-├─ pages/ # Pages principales (Home, Logement, About, Error)
-├─ data/ # Données mockées (logements.json)
-├─ styles/ # Styles globaux
-├─ App.jsx # Configuration des routes
-└─ main.jsx # Point d’entrée de l’application
+├─ assets/         # Images, icônes et ressources statiques
+├─ components/     # Composants réutilisables (Banner, Card, Collapse, Slideshow, Header, Footer)
+├─ layout/         # Centralisation des éléments communs à toutes les pages (Header, Footer, Layout)
+├─ pages/          # Pages principales (Home, Logement, About, Error)
+├─ data/           # Données mockées (logements.json)
+├─ styles/         # Styles globaux
+├─ App.jsx         # Configuration des routes
+└─ main.jsx        # Point d’entrée de l’application
+```
 
 ## Fonctionnalités
 
