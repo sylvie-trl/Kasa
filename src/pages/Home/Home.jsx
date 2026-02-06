@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Banner
         image="/images/banner-home.jpg"
-        title="Chez vous, partout et ailleurs"
+        title={"Chez vous, \npartout et ailleurs"}
         opacity={0.6}
       />
 
