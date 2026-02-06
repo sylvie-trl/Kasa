@@ -1,16 +1,67 @@
-# React + Vite
+# Kasa – Application de location immobilière
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est une application web développée avec React dans le cadre de la formation Développeur Front-End - OpenClassrooms.
 
-Currently, two official plugins are available:
+L’objectif est de créer le front-end d’une plateforme de location immobilière à partir de maquettes Figma, en utilisant React et React Router.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Technologies utilisées
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- React Router
+- JavaScript (ES6+)
+- HTML5
+- CSS / SCSS
+- Vite
 
-## Expanding the ESLint configuration
+## Structure du projet
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+├─ assets/ # Images, icônes et ressources statiques
+├─ components/ # Composants réutilisables (Banner, Card, Collapse, Footer, Header, Slideshow)
+├─ pages/ # Pages principales (Home, Logement, About, Error)
+├─ data/ # Données mockées (logements.json)
+├─ layout/ # Centralisation des éléments communs à toutes les pages
+├─ styles/ # Styles globaux
+├─ App.jsx # Configuration des routes
+└─ main.jsx # Point d’entrée de l’application
+
+## Fonctionnalités
+
+- Affichage de la liste des logements disponibles
+- Navigation entre les pages grâce à React Router
+- Page de détails pour chaque logement
+- Slideshow des images
+- Sections repliables (Collapse)
+- Gestion des erreurs avec une page 404
+- Interface responsive conforme aux maquettes
+
+## Installation et lancement du projet
+
+### Prérequis
+
+- Node.js (version recommandée : 18+)
+- npm ou yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Lancement du serveur de développement
+
+```bash
+npm run dev
+```
+
+L’application est accessible à l’adresse indiquée dans le terminal (par défaut : http://localhost:5173).
+
+### Données
+
+Les données des logements sont simulées via un fichier JSON (logements.json) fourni dans le cadre du projet.
+Aucune API externe n’est utilisée.
+
+Projet réalisé par Sylvie Trollé
+Dans le cadre du parcours Développeur Front-End - OpenClassrooms
