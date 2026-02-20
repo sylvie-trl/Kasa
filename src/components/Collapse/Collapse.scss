@@ -1,10 +1,12 @@
 @import "../../styles/_variables.scss";
 
 .collapse {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   border-radius: 5px;
   overflow: hidden;
-  background-color: #f6f6f6;
+  background-color: transparent;
 
   &__header {
     width: 100%;
@@ -36,10 +38,13 @@
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.35s ease;
+    background-color: #f6f6f6;
   }
 
   &__content--open {
-    max-height: 600px; // large
+    max-height: 600px;
+    flex: 1;
+    min-height: 0;
   }
 
   &__content-inner {
@@ -54,7 +59,7 @@
       opacity 0.25s ease;
   }
 
-  &__content--open &__content-inner {
+  &__content--open .collapse__content-inner {
     transform: translateY(0);
     opacity: 1;
   }
